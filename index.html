@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayalaseema Ruchulu - Recipe Book</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    a { color: #e5e4e3; }
+    a:hover { color: #ff6f3c; text-decoration: none; }
+
+    .hero {
+      background-color: #1f1f1f;
+      color: #efefed;
+    }
+
+    .chapter-card, .category-card, .profile-card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+    .chapter-card:hover, .category-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgb(248, 246, 246);
+    }
+
+    .btn-secondary {
+      background-color: #333;
+      color: #f9f7f0;
+      border: none;
+    }
+    .btn-secondary:hover {
+      background-color: #efebe9;
+      color: #fff;
+    }
+
+    .profile-card {
+      text-align: center;
+    }
+    .profile-card img {
+      border: 3px solid #efefef;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .quote {
+      font-style: italic;
+      color: #f0f0f0;
+    }
+    .section-title {
+      color: #efede7;
+      font-family: 'Merriweather', serif;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Section -->
+  <header class="hero text-center py-5">
+    <h1 class="display-3 fw-bold mb-3">Rayalaseema Ruchulu</h1>
+    <p class="lead mb-4">Authentic Flavors of Rayalaseema, Andhra Pradesh</p>
+    <img src="images/book-cover.jpg" alt="Book Cover" class="img-fluid rounded" style="max-width:400px;">
+  </header>
+
+  <!-- Table of Contents -->
+  <section id="toc" class="container my-5">
+    <h2 class="section-title text-center mb-4">Table of Contents</h2>
+
+    <div class="row mb-4 category-grid grid-row-2">
+      <div class="col-md-6">
+        <div class="chapter-card category-card">
+          <h3>1. Vegetarian Recipes</h3>
+          <p>Delicious vegetarian dishes from Rayalaseema with bold spices and traditional flavors.</p>
+          <a href="vegetarian.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="chapter-card category-card">
+          <h3>2. Non-Vegetarian Recipes</h3>
+          <p>Authentic meat and seafood curries showcasing Rayalaseema's fiery cuisine.</p>
+          <a href="nonveg.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4 category-grid grid-row-3">
+      <div class="col-md-4">
+        <div class="chapter-card category-card">
+          <h3>3. Desserts</h3>
+          <p>Sweet delights to end a Rayalaseema meal on a perfect note.</p>
+          <a href="desserts.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="chapter-card category-card">
+          <h3>4. Soups & Rasams</h3>
+          <p>Warm, spiced soups perfect for a comforting meal.</p>
+          <a href="soups.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="chapter-card category-card">
+          <h3>5. Sweets</h3>
+          <p>Traditional Rayalaseema sweets made with jaggery, coconut, and love.</p>
+          <a href="sweets.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4 category-grid grid-row-2">
+      <div class="col-md-6">
+        <div class="chapter-card category-card">
+          <h3>6. Pickles</h3>
+          <p>Spicy and tangy homemade pickles that every Rayalaseema kitchen treasures.</p>
+          <a href="pickles.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="chapter-card category-card">
+          <h3>7. Snacks</h3>
+          <p>Street-style snacks and crispy bites loved across Rayalaseema.</p>
+          <a href="snacks.html" class="btn btn-secondary">View Recipes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Author -->
+  <section id="author" class="bg-dark py-5 profile-card">
+    <div class="container text-center">
+      <h2 class="mb-4">About the Author</h2>
+      <img src="images/bhavna.jpg" alt="Bhavna Reddy" class="img-fluid rounded-circle mb-3" style="max-width:200px;">
+      <p class="quote">Hi! I'm Bhavna Reddy, a first-year engineering student and Rayalaseema food enthusiast. I grew up surrounded by the fiery aromas of authentic Rayalaseema dishes and now share these recipes with everyone.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="mb-0">&copy; 2025 Rayalaseema Ruchulu | All Rights Reserved</p>
+  </footer>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

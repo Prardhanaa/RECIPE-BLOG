@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayalaseema Soups - Interactive</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+  body {
+      background-color: #000;   /* Black background */
+      color: #fff;             /* White font */
+      font-family: Arial, sans-serif;
+  }
+
+  .card {
+      cursor: pointer;
+      background-color: #000;  /* Black card */
+      border: 1px solid #fff;  /* White border */
+      transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #fff; /* White glow */
+  }
+
+  .card-title {
+      color: #fff; /* White */
+  }
+
+  .card-text {
+      color: #fff; /* White */
+  }
+
+  .modal-content {
+      background-color: #000; /* Black modal */
+      color: #fff;           /* White text */
+  }
+
+  .modal-header .btn-close {
+      filter: invert(1);
+  }
+
+  .hero-section {
+      background-color: #000; /* Black */
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff; /* White */
+  }
+
+  footer {
+      background-color: #000; /* Black */
+      color: #fff;           /* White */
+  }
+</style>
+
+</head>
+<body>
+
+<!-- Hero Section -->
+<header class="hero-section">
+  <div>
+    <h1 class="display-4 fw-bold">Rayalaseema Soups</h1>
+    <p class="lead">Warm, Tasty Soups from the Land of Spices 🌶️🥣</p>
+    <a href="index.html" class="btn btn-light btn-lg mt-3">← Back to Home</a>
+  </div>
+</header>
+
+<div class="container my-5">
+  <h2 class="mb-4">Vegetarian Soups</h2>
+  <div class="row g-4">
+
+    <!-- Tomato Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#tomatoModal">
+        <img src="images/tomato_soup.jpg" class="card-img-top" alt="Tomato Soup">
+        <div class="card-body">
+          <h5 class="card-title">Tomato Soup</h5>
+          <p class="card-text">Classic creamy tomato soup with a hint of black pepper.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pepper Rasam -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#pepperModal">
+        <img src="images/pepper_rasam.jpg" class="card-img-top" alt="Pepper Rasam">
+        <div class="card-body">
+          <h5 class="card-title">Pepper Rasam</h5>
+          <p class="card-text">Spicy, tangy, and peppery; a perfect digestive soup.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lemon Rasam -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#lemonModal">
+        <img src="images/lemon_rasam.jpg" class="card-img-top" alt="Lemon Rasam">
+        <div class="card-body">
+          <h5 class="card-title">Lemon Rasam</h5>
+          <p class="card-text">Tangy lemon-flavored rasam, light and refreshing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vegetable Clear Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#vegClearModal">
+        <img src="images/veg_clear_soup.jpg" class="card-img-top" alt="Vegetable Clear Soup">
+        <div class="card-body">
+          <h5 class="card-title">Vegetable Clear Soup</h5>
+          <p class="card-text">Mix of carrots, beans, and capsicum in a light broth.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spinach Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#spinachModal">
+        <img src="images/spinach_soup.jpg" class="card-img-top" alt="Spinach Soup">
+        <div class="card-body">
+          <h5 class="card-title">Spinach Soup</h5>
+          <p class="card-text">Creamy spinach soup with mild seasoning.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="my-5">Non-Vegetarian Soups</h2>
+  <div class="row g-4">
+
+    <!-- Chicken Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#chickenModal">
+        <img src="images/chicken_soup.jpg" class="card-img-top" alt="Chicken Soup">
+        <div class="card-body">
+          <h5 class="card-title">Chicken Soup</h5>
+          <p class="card-text">Traditional spicy chicken broth with vegetables.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mutton Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#muttonModal">
+        <img src="images/mutton_soup.jpg" class="card-img-top" alt="Mutton Soup">
+        <div class="card-body">
+          <h5 class="card-title">Mutton Soup</h5>
+          <p class="card-text">Hearty and warming soup with slow-cooked mutton pieces.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Egg Drop Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#eggModal">
+        <img src="images/egg_drop_soup.jpg" class="card-img-top" alt="Egg Drop Soup">
+        <div class="card-body">
+          <h5 class="card-title">Egg Drop Soup</h5>
+          <p class="card-text">Chicken broth with beaten egg ribbons and optional veggies.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prawn Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#prawnModal">
+        <img src="images/prawn_soup.jpg" class="card-img-top" alt="Prawn Soup">
+        <div class="card-body">
+          <h5 class="card-title">Prawn Soup</h5>
+          <p class="card-text">Tangy prawn soup with a light spice base.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fish Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#fishModal">
+        <img src="images/fish_soup.jpg" class="card-img-top" alt="Fish Soup">
+        <div class="card-body">
+          <h5 class="card-title">Fish Soup</h5>
+          <p class="card-text">Light fish broth with ginger, garlic, and coriander.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crab Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#crabModal">
+        <img src="images/crab_soup.jpg" class="card-img-top" alt="Crab Soup">
+        <div class="card-body">
+          <h5 class="card-title">Crab Soup</h5>
+          <p class="card-text">Rich crab broth with spices, a coastal Rayalaseema specialty.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paya Soup -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#payaModal">
+        <img src="images/paya_soup.jpg" class="card-img-top" alt="Paya Soup">
+        <div class="card-body">
+          <h5 class="card-title">Paya Soup</h5>
+          <p class="card-text">Slow-cooked goat trotters in spiced broth.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-center py-3">
+  <p class="mb-0">&copy; 2025 Rayalaseema Ruchulu | All Rights Reserved</p>
+</footer>
+
+<!-- Modals for all soups -->
+<!-- Tomato Soup Modal -->
+<div class="modal fade" id="tomatoModal" tabindex="-1" aria-labelledby="tomatoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tomatoModalLabel">Tomato Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>4 large tomatoes, chopped</li>
+          <li>1 onion, chopped</li>
+          <li>2 garlic cloves</li>
+          <li>2 cups vegetable broth</li>
+          <li>Salt & pepper to taste</li>
+          <li>1 tsp butter (optional)</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Heat butter in a pan, sauté onions and garlic until soft.</li>
+          <li>Add tomatoes and cook until mushy.</li>
+          <li>Add vegetable broth, simmer 10 minutes.</li>
+          <li>Blend until smooth, season with salt and pepper.</li>
+          <li>Serve hot with a garnish of herbs.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pepper Rasam Modal -->
+<div class="modal fade" id="pepperModal" tabindex="-1" aria-labelledby="pepperModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pepperModalLabel">Pepper Rasam</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>1 tsp black peppercorns</li>
+          <li>1/2 cup tamarind extract</li>
+          <li>1 tomato, chopped</li>
+          <li>2 cups water</li>
+          <li>Salt to taste</li>
+          <li>Curry leaves</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Crush peppercorns and cook with tamarind water.</li>
+          <li>Add tomato and boil 5 minutes.</li>
+          <li>Add salt and curry leaves.</li>
+          <li>Serve hot as a digestive soup.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lemon Rasam Modal -->
+<div class="modal fade" id="lemonModal" tabindex="-1" aria-labelledby="lemonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lemonModalLabel">Lemon Rasam</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>1/4 cup lemon juice</li>
+          <li>2 cups tamarind water</li>
+          <li>1 tomato, chopped</li>
+          <li>1 tsp cumin seeds</li>
+          <li>Salt to taste</li>
+          <li>Curry leaves</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Boil tamarind water with tomato and spices.</li>
+          <li>Add lemon juice and salt.</li>
+          <li>Garnish with curry leaves and serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Vegetable Clear Soup Modal -->
+<div class="modal fade" id="vegClearModal" tabindex="-1" aria-labelledby="vegClearModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="vegClearModalLabel">Vegetable Clear Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>1 carrot, sliced</li>
+          <li>1 capsicum, sliced</li>
+          <li>Beans, chopped</li>
+          <li>2 cups vegetable broth</li>
+          <li>Salt & pepper to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Boil vegetables in broth 10 minutes.</li>
+          <li>Season with salt and pepper.</li>
+          <li>Serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Spinach Soup Modal -->
+<div class="modal fade" id="spinachModal" tabindex="-1" aria-labelledby="spinachModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="spinachModalLabel">Spinach Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2 cups spinach leaves</li>
+          <li>1 onion, chopped</li>
+          <li>2 garlic cloves</li>
+          <li>2 cups vegetable broth</li>
+          <li>Salt & pepper to taste</li>
+          <li>1 tsp cream (optional)</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Sauté onion and garlic, add spinach and broth.</li>
+          <li>Simmer 10 minutes and blend until smooth.</li>
+          <li>Add cream if desired, season, and serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chicken Soup Modal -->
+<div class="modal fade" id="chickenModal" tabindex="-1" aria-labelledby="chickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chickenModalLabel">Chicken Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>200g chicken pieces</li>
+          <li>1 carrot, chopped</li>
+          <li>1 onion, chopped</li>
+          <li>2 garlic cloves</li>
+          <li>4 cups chicken broth</li>
+          <li>Salt & pepper to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Boil chicken and vegetables in broth for 20 minutes.</li>
+          <li>Season with salt and pepper.</li>
+          <li>Serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mutton Soup Modal -->
+<div class="modal fade" id="muttonModal" tabindex="-1" aria-labelledby="muttonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="muttonModalLabel">Mutton Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>200g mutton pieces</li>
+          <li>1 onion, chopped</li>
+          <li>1 tomato, chopped</li>
+          <li>2 cups water</li>
+          <li>Spices & salt to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Cook mutton slowly with onion, tomato, and spices 40 minutes.</li>
+          <li>Serve hot as a hearty soup.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Egg Drop Soup Modal -->
+<div class="modal fade" id="eggModal" tabindex="-1" aria-labelledby="eggModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eggModalLabel">Egg Drop Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2 eggs, beaten</li>
+          <li>2 cups chicken broth</li>
+          <li>1 tsp cornstarch (optional)</li>
+          <li>Salt & pepper to taste</li>
+          <li>Chopped spring onions</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Heat broth and bring to a gentle boil.</li>
+          <li>Slowly pour beaten eggs while stirring to form ribbons.</li>
+          <li>Add cornstarch for thickness (optional), season, and garnish with spring onions.</li>
+          <li>Serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Prawn Soup Modal -->
+<div class="modal fade" id="prawnModal" tabindex="-1" aria-labelledby="prawnModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="prawnModalLabel">Prawn Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>200g prawns, cleaned</li>
+          <li>1 onion, chopped</li>
+          <li>1 tomato, chopped</li>
+          <li>2 cups water or seafood stock</li>
+          <li>1 tsp ginger-garlic paste</li>
+          <li>Salt & pepper to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Sauté onion, tomato, and ginger-garlic paste.</li>
+          <li>Add prawns and cook 5 minutes.</li>
+          <li>Add stock, simmer 10 minutes, season, and serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fish Soup Modal -->
+<div class="modal fade" id="fishModal" tabindex="-1" aria-labelledby="fishModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fishModalLabel">Fish Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>200g fish fillets</li>
+          <li>2 cups water or fish stock</li>
+          <li>1 onion, chopped</li>
+          <li>1 tsp ginger-garlic paste</li>
+          <li>1 tsp chopped coriander</li>
+          <li>Salt & pepper to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Boil water with onion and ginger-garlic paste.</li>
+          <li>Add fish fillets, simmer 10 minutes.</li>
+          <li>Season with salt, pepper, garnish with coriander, and serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Crab Soup Modal -->
+<div class="modal fade" id="crabModal" tabindex="-1" aria-labelledby="crabModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="crabModalLabel">Crab Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>200g crab meat</li>
+          <li>1 onion, chopped</li>
+          <li>1 tomato, chopped</li>
+          <li>2 cups water or seafood stock</li>
+          <li>Spices & salt to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Sauté onion and tomato, add crab meat and spices.</li>
+          <li>Add stock, simmer 15 minutes.</li>
+          <li>Season and serve hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Paya Soup Modal -->
+<div class="modal fade" id="payaModal" tabindex="-1" aria-labelledby="payaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="payaModalLabel">Paya Soup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2-3 goat trotters, cleaned</li>
+          <li>1 onion, chopped</li>
+          <li>2 garlic cloves</li>
+          <li>2-3 cups water</li>
+          <li>Spices & salt to taste</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Boil trotters with onion, garlic, and spices for 2-3 hours until tender.</li>
+          <li>Strain, season, and serve hot as a hearty soup.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

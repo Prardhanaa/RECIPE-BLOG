@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Author - Rayalaseema Ruchulu</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .profile-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .social-icons a {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      color: #d8d0cd;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.3);
+      color: #ede3e3;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .fun-fact {
+      background-color: #fff3e0;
+      padding: 15px;
+      border-left: 5px solid #d1c7c4;
+      margin-top: 15px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="background-color:#ff6f3c; height:250px;">
+    <div>
+      <h1 class="display-3 fw-bold">About the Author</h1>
+      <p class="lead">Bhavna Reddy – Engineering Student & Rayalaseema Food Enthusiast</p>
+      <a href="index.html" class="btn btn-light btn-lg mt-3">Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="container my-5">
+    <div class="row g-4 align-items-center">
+      
+      <!-- Author Image Card -->
+      <div class="col-md-4 text-center">
+        <div class="card profile-card p-3 shadow rounded">
+          <img src="images/bhavna.jpg" alt="Bhavna Reddy" class="img-fluid rounded-circle mb-3" style="max-width: 250px;">
+          <h3>Bhavna Reddy</h3>
+          <p class="quote">"From the heart of Rayalaseema, bringing family recipes to your kitchen."</p>
+        </div>
+      </div>
+      
+      <!-- Author Info & Journey -->
+      <div class="col-md-8">
+        <div class="accordion" id="authorAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Biography
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#authorAccordion">
+              <div class="accordion-body">
+                Hi! I’m Bhavna Reddy, a first-year engineering student from the vibrant region of Rayalaseema in Andhra Pradesh. Growing up, I was surrounded by the fiery aromas of home-cooked Rayalaseema food. My mom and grandma taught me the secrets of authentic dishes, from spicy curries to sweet desserts. These family recipes inspired me to create this collection and share the authentic flavors of our heritage with everyone.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                My Journey & Passion
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#authorAccordion">
+              <div class="accordion-body">
+                Despite being a student of engineering, my heart has always been in the kitchen. I enjoy experimenting with traditional recipes while keeping them authentic. Each dish in this collection has a story—whether it’s a childhood memory, a festive celebration, or a family secret spice mix. Sharing Rayalaseema cuisine is my way of connecting people to my roots and spreading the love for bold, flavorful food.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Fun Facts & Favorite Recipes
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#authorAccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>Favorite dish to cook: <strong>Natu Kodi Pulusu</strong> (country chicken curry).</li>
+                  <li>Favorite dessert: <strong>Bobbatu / Holige</strong>, taught by my grandma.</li>
+                  <li>Secret ingredient in my cooking: love and a little extra Guntur chili for that authentic kick!</li>
+                  <li>Tip for beginners: Always follow the aroma—it tells you when a dish is perfect.</li>
+                </ul>
+                <div class="fun-fact">
+                  Fun fact: Most of these recipes were passed down orally in my family, and I’m the first to document them digitally for everyone to enjoy!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                Contact & Social Media
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#authorAccordion">
+              <div class="accordion-body text-center">
+                <p>Email: <a href="mailto:bhavna@example.com">bhavna@example.com</a></p>
+                <p>Phone: +91 98765 43210</p>
+                <div class="social-icons">
+                  <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
+                  <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i> YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Rayalaseema Ruchulu | All Rights Reserved</p>
+  </footer>
+
+  <!-- jQuery, Bootstrap JS, Custom JS -->
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

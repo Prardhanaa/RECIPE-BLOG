@@ -1,0 +1,112 @@
+/* General Body */
+body {
+    background-color: #000000;  /* Black background */
+    color: #ffffff;             /* White text */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;  /* All headings white */
+}
+
+/* Paragraphs */
+p, .lead, .quote {
+    color: #ffffff;  /* All paragraphs white */
+}
+
+/* Links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn, .btn-secondary {
+    background-color: #222222;  /* Dark button background */
+    color: #ffffff !important;   /* White text */
+    border-color: #ffffff !important;
+}
+
+.btn:hover {
+    background-color: #444444;
+    color: #ffffff !important;
+}
+
+/* Hero / Header Sections */
+.hero, .hero-section {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+}
+
+/* Cards */
+.card {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 12px;
+}
+
+.card-title, .card-subtitle {
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+}
+
+/* Modals */
+.modal-content {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Table of Contents Cards */
+.category-card {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Remove Bootstrap text-warning/yellow classes */
+.text-warning, .text-danger, .text-success {
+    color: #ffffff !important;
+}
+
+/* Images inside cards */
+.card img, .chapter-card img {
+    border-radius: 10px;
+}
+
+/* Scrollbar (optional, for dark theme) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #222222;
+}

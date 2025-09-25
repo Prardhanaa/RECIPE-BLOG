@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayalaseema Non-Veg Ruchulu</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fbf5f5;
+    }
+    .card {
+      background-color: #111;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+    }
+    .modal-content {
+      background-color: #111;
+      color: #fbfafa;
+    }
+    .modal-header {
+      background-color: #180603;
+      color: #fff;
+    }
+    .modal-body h6 {
+      color: lab(95.34% 0.83 0.82);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero / Header Section -->
+<header class="hero-section text-center d-flex align-items-center justify-content-center" style="background-color:#222; height:200px;">
+  <div>
+    <h1 class="display-4 fw-bold">Rayalaseema Non-Veg Ruchulu</h1>
+    <p class="lead">Authentic Non-Vegetarian Flavors from the Land of Spices 🌶️🍗</p>
+    <a href="index.html" class="btn btn-light btn-lg mt-3">← Back to Home</a>
+  </div>
+</header>
+
+<div class="container my-5">
+
+  <!-- Breakfast Section -->
+  <h2 class="text-warning mb-4">Breakfast / Tiffin</h2>
+  <div class="row g-4">
+    <!-- Idli with Chicken / Mutton -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#idliChickenModal">
+        <img src="images/idli_chicken.jpg" class="card-img-top" alt="Idli with Chicken/Mutton">
+        <div class="card-body">
+          <h5 class="card-title">Idli with Chicken / Mutton</h5>
+          <p class="card-text">Served with raita / perugu pacchadi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dosa with Chicken / Mutton -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#dosaChickenModal">
+        <img src="images/dosa_chicken.jpg" class="card-img-top" alt="Dosa with Chicken/Mutton">
+        <div class="card-body">
+          <h5 class="card-title">Dosa with Chicken / Mutton</h5>
+          <p class="card-text">Goes well with chutney or raita.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapathi with Chicken / Mutton -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#chapathiChickenModal">
+        <img src="images/chapathi_chicken.jpg" class="card-img-top" alt="Chapathi with Chicken/Mutton">
+        <div class="card-body">
+          <h5 class="card-title">Chapathi with Chicken / Mutton</h5>
+          <p class="card-text">Soft chapathi served with chicken or mutton curry.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poori with Chicken / Mutton Fry -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#pooriChickenModal">
+        <img src="images/poori_chicken.jpg" class="card-img-top" alt="Poori with Chicken/Mutton Fry">
+        <div class="card-body">
+          <h5 class="card-title">Poori with Chicken / Mutton Fry</h5>
+          <p class="card-text">Served with raita / perugu pacchadi side dish.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lunch Section -->
+  <h2 class="text-warning my-5">Lunch</h2>
+  <div class="row g-4">
+    <!-- Color Rice with Non-Veg Curries -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#colorRiceModal">
+        <img src="images/color_rice_nonveg.jpg" class="card-img-top" alt="Color Rice with Non-Veg Curries">
+        <div class="card-body">
+          <h5 class="card-title">Color Rice with Non-Veg Curries</h5>
+          <p class="card-text">Steamed rice served with chicken, mutton, prawns, or crab curry.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rice with Fish Curry -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#fishCurryModal">
+        <img src="images/fish_curry_rice.jpg" class="card-img-top" alt="Rice with Fish Curry">
+        <div class="card-body">
+          <h5 class="card-title">Rice with Fish Curry (Special)</h5>
+          <p class="card-text">Rayalaseema-style fish curry with steamed rice.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biryani -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#biryaniModal">
+        <img src="images/biryani.jpg" class="card-img-top" alt="Non-Veg Biryani">
+        <div class="card-body">
+          <h5 class="card-title">Biryani</h5>
+          <p class="card-text">Chicken, Mutton, Fish, Egg, or Prawn Biryani with raita or salad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dinner Section -->
+  <h2 class="text-warning my-5">Dinner</h2>
+  <div class="row g-4">
+    <!-- Chapathi / Rotti with Non-Veg Curry -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#chapathiNonVegModal">
+        <img src="images/chapathi_nonveg.jpg" class="card-img-top" alt="Chapathi with Non-Veg Curry">
+        <div class="card-body">
+          <h5 class="card-title">Chapathi / Rotti with Non-Veg Curry</h5>
+          <p class="card-text">Served with chicken or mutton curry.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ragi Sangati with Natukodi Pulusu -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#ragiSangatiModal">
+        <img src="images/ragi_sangati_natukodi.jpg" class="card-img-top" alt="Ragi Sangati with Natukodi Pulusu">
+        <div class="card-body">
+          <h5 class="card-title">Ragi Sangati with Natukodi Pulusu</h5>
+          <p class="card-text">Rayalaseema special — ragi balls served with country chicken curry.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modals for Ingredients & Preparation -->
+<!-- Idli with Chicken / Mutton Modal -->
+<div class="modal fade" id="idliChickenModal" tabindex="-1" aria-labelledby="idliChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="idliChickenModalLabel">Idli with Chicken / Mutton</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>4-6 Idlis</li>
+          <li>200g Chicken or Mutton pieces</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Turmeric, Chili powder, Garam masala, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Cook chicken/mutton with spices, onion, tomato, garlic, and ginger.</li>
+          <li>Steam idlis until soft and fluffy.</li>
+          <li>Serve hot idlis with prepared curry and raita/perugu pacchadi.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dosa with Chicken / Mutton Modal -->
+<div class="modal fade" id="dosaChickenModal" tabindex="-1" aria-labelledby="dosaChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="dosaChickenModalLabel">Dosa with Chicken / Mutton</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2-3 Dosas</li>
+          <li>200g Chicken or Mutton pieces</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Turmeric, Chili powder, Garam masala, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Cook chicken/mutton with spices, onion, tomato, garlic, and ginger.</li>
+          <li>Prepare crispy dosas on a hot pan.</li>
+          <li>Serve dosas with curry and chutney/raita.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chapathi with Chicken / Mutton Modal -->
+<div class="modal fade" id="chapathiChickenModal" tabindex="-1" aria-labelledby="chapathiChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chapathiChickenModalLabel">Chapathi with Chicken / Mutton</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>4 Chapathis</li>
+          <li>200g Chicken or Mutton pieces</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Turmeric, Chili powder, Garam masala, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Cook chicken/mutton curry with spices, onion, tomato, garlic, and ginger.</li>
+          <li>Prepare soft chapathis on a flat pan.</li>
+          <li>Serve chapathi with curry hot.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Poori with Chicken / Mutton Fry Modal -->
+<div class="modal fade" id="pooriChickenModal" tabindex="-1" aria-labelledby="pooriChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pooriChickenModalLabel">Poori with Chicken / Mutton Fry</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>4-5 Pooris</li>
+          <li>200g Chicken or Mutton pieces</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Turmeric, Chili powder, Garam masala, Salt</li>
+          <li>Oil for deep frying</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Prepare chicken/mutton fry with spices and sautéed onion, tomato, garlic, ginger.</li>
+          <li>Deep fry poori until golden and fluffy.</li>
+          <li>Serve hot with curry and raita.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Continue the same pattern for Lunch & Dinner recipes... -->
+ <!-- Lunch Recipes Modals -->
+
+<!-- Color Rice with Non-Veg Curries Modal -->
+<div class="modal fade" id="colorRiceModal" tabindex="-1" aria-labelledby="colorRiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="colorRiceModalLabel">Color Rice with Non-Veg Curries</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2 cups steamed rice</li>
+          <li>200g Chicken or Mutton curry</li>
+          <li>150g Prawns or Crab curry (optional)</li>
+          <li>Spices: Chili powder, Turmeric, Coriander, Garam masala, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Prepare individual non-veg curries with spices.</li>
+          <li>Cook rice and keep warm.</li>
+          <li>Serve steamed rice with a variety of curries on the side.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rice with Fish Curry Modal -->
+<div class="modal fade" id="fishCurryModal" tabindex="-1" aria-labelledby="fishCurryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fishCurryModalLabel">Rice with Fish Curry</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2 cups steamed rice</li>
+          <li>200g fish pieces (preferably freshwater fish)</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Tamarind, Chili powder, Turmeric, Coriander, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Prepare fish curry with tamarind, onion, tomato, and spices.</li>
+          <li>Cook steamed rice until fluffy.</li>
+          <li>Serve fish curry hot with rice.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Biryani Modal -->
+<div class="modal fade" id="biryaniModal" tabindex="-1" aria-labelledby="biryaniModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="biryaniModalLabel">Biryani</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>2 cups Basmati rice</li>
+          <li>200g Chicken / Mutton / Fish / Egg / Prawns</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Garam masala, Turmeric, Chili powder, Coriander, Bay leaves, Salt</li>
+          <li>Yogurt, Oil, Ghee</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Marinate meat or fish with spices and yogurt for 30-60 mins.</li>
+          <li>Fry onions, prepare curry base, and layer partially cooked rice.</li>
+          <li>Cook on low flame for 20-25 mins until biryani is done.</li>
+          <li>Serve hot with raita or salad.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dinner Recipes Modals -->
+
+<!-- Chapathi / Rotti with Non-Veg Curry Modal -->
+<div class="modal fade" id="chapathiNonVegModal" tabindex="-1" aria-labelledby="chapathiNonVegModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chapathiNonVegModalLabel">Chapathi / Rotti with Non-Veg Curry</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>4-6 Chapathis or Rottis</li>
+          <li>200g Chicken or Mutton curry</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Chili powder, Turmeric, Garam masala, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Cook chicken/mutton curry with spices, onion, tomato, garlic, and ginger.</li>
+          <li>Prepare soft chapathi/rotti on a flat pan.</li>
+          <li>Serve hot with curry.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ragi Sangati with Natukodi Pulusu Modal -->
+<div class="modal fade" id="ragiSangatiModal" tabindex="-1" aria-labelledby="ragiSangatiModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ragiSangatiModalLabel">Ragi Sangati with Natukodi Pulusu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Ingredients:</h6>
+        <ul>
+          <li>Ragi flour – 2 cups</li>
+          <li>Water – as needed to make dough</li>
+          <li>200g Country Chicken (Natukodi)</li>
+          <li>Onion, Tomato, Garlic, Ginger</li>
+          <li>Spices: Guntur chili, Turmeric, Coriander, Salt</li>
+          <li>Oil for cooking</li>
+        </ul>
+        <h6>Preparation:</h6>
+        <ol>
+          <li>Prepare dough with ragi flour and water, shape into small balls (sangati).</li>
+          <li>Cook Natukodi pulusu: sauté onion, tomato, garlic, ginger, add chicken and spices.</li>
+          <li>Steam or cook ragi sangati in water until soft.</li>
+          <li>Serve hot ragi balls with Natukodi Pulusu.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End of Modals -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
